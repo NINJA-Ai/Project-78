@@ -1,0 +1,31 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <title> My Family Book </title>
+    </head>
+    <body>
+        <h1> My Family Book </h1>
+        <h2> </h2>
+        <h3> </h3>
+        <img id="img1" src="https://images-na.ssl-images-amazon.com/images/I/91zbi9M+mKL.jpg" height="600" width="500">
+        <h4 id="names1"> Chandra Family </h4> 
+        <div> 
+            <button type="button1" onclick="Nextslide()"> Next </button>
+        </div>
+        <script>
+            var images = [ "IMG_4269.jpg", "IMG_4316.jpg", "IMG_4305.jpg", "IMG_4339.jpg"]
+            var names = ["Chandra Family", "Aditya Chandra", "Suniti Chandra", "Maadhav Chandra and Shreyas Chandra"]
+            var i = 0;
+            
+            function Nextslide() {
+                document.getElementById("img1").src = images[i];
+                document.getElementById("names1").innerHTML = names[i];
+                                
+                i = i + 1;
+                if (i == 4) {
+                    i = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
